@@ -46,9 +46,9 @@
             // image_logo
             // 
             this.image_logo.BackColor = System.Drawing.Color.Transparent;
-            this.image_logo.Location = new System.Drawing.Point(432, 237);
+            this.image_logo.Location = new System.Drawing.Point(310, 247);
             this.image_logo.Name = "image_logo";
-            this.image_logo.Size = new System.Drawing.Size(330, 200);
+            this.image_logo.Size = new System.Drawing.Size(450, 200);
             this.image_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.image_logo.TabIndex = 9;
             this.image_logo.TabStop = false;
@@ -59,7 +59,7 @@
             this.linkLabelpod.BackColor = System.Drawing.Color.Transparent;
             this.linkLabelpod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.linkLabelpod.LinkColor = System.Drawing.SystemColors.WindowText;
-            this.linkLabelpod.Location = new System.Drawing.Point(384, 520);
+            this.linkLabelpod.Location = new System.Drawing.Point(289, 532);
             this.linkLabelpod.Name = "linkLabelpod";
             this.linkLabelpod.Size = new System.Drawing.Size(148, 16);
             this.linkLabelpod.TabIndex = 19;
@@ -73,7 +73,7 @@
             this.linkLabeledp.BackColor = System.Drawing.Color.Transparent;
             this.linkLabeledp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.linkLabeledp.LinkColor = System.Drawing.SystemColors.WindowText;
-            this.linkLabeledp.Location = new System.Drawing.Point(384, 498);
+            this.linkLabeledp.Location = new System.Drawing.Point(289, 510);
             this.linkLabeledp.Name = "linkLabeledp";
             this.linkLabeledp.Size = new System.Drawing.Size(38, 16);
             this.linkLabeledp.TabIndex = 20;
@@ -87,7 +87,7 @@
             this.linkLabelsao.BackColor = System.Drawing.Color.Transparent;
             this.linkLabelsao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.linkLabelsao.LinkColor = System.Drawing.SystemColors.WindowText;
-            this.linkLabelsao.Location = new System.Drawing.Point(384, 541);
+            this.linkLabelsao.Location = new System.Drawing.Point(289, 553);
             this.linkLabelsao.Name = "linkLabelsao";
             this.linkLabelsao.Size = new System.Drawing.Size(38, 16);
             this.linkLabelsao.TabIndex = 21;
@@ -101,7 +101,7 @@
             this.linkLabelaccounting.BackColor = System.Drawing.Color.Transparent;
             this.linkLabelaccounting.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.linkLabelaccounting.LinkColor = System.Drawing.SystemColors.WindowText;
-            this.linkLabelaccounting.Location = new System.Drawing.Point(384, 563);
+            this.linkLabelaccounting.Location = new System.Drawing.Point(289, 575);
             this.linkLabelaccounting.Name = "linkLabelaccounting";
             this.linkLabelaccounting.Size = new System.Drawing.Size(83, 16);
             this.linkLabelaccounting.TabIndex = 22;
@@ -115,7 +115,7 @@
             this.linkLabellibrary.BackColor = System.Drawing.Color.Transparent;
             this.linkLabellibrary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.linkLabellibrary.LinkColor = System.Drawing.SystemColors.WindowText;
-            this.linkLabellibrary.Location = new System.Drawing.Point(875, 548);
+            this.linkLabellibrary.Location = new System.Drawing.Point(780, 560);
             this.linkLabellibrary.Name = "linkLabellibrary";
             this.linkLabellibrary.Size = new System.Drawing.Size(55, 16);
             this.linkLabellibrary.TabIndex = 28;
@@ -128,7 +128,7 @@
             this.linkLabelgate.BackColor = System.Drawing.Color.Transparent;
             this.linkLabelgate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.linkLabelgate.LinkColor = System.Drawing.SystemColors.WindowText;
-            this.linkLabelgate.Location = new System.Drawing.Point(875, 505);
+            this.linkLabelgate.Location = new System.Drawing.Point(780, 517);
             this.linkLabelgate.Name = "linkLabelgate";
             this.linkLabelgate.Size = new System.Drawing.Size(40, 16);
             this.linkLabelgate.TabIndex = 27;
@@ -141,7 +141,7 @@
             this.linkLabellaboratory.BackColor = System.Drawing.Color.Transparent;
             this.linkLabellaboratory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.linkLabellaboratory.LinkColor = System.Drawing.SystemColors.WindowText;
-            this.linkLabellaboratory.Location = new System.Drawing.Point(875, 527);
+            this.linkLabellaboratory.Location = new System.Drawing.Point(780, 539);
             this.linkLabellaboratory.Name = "linkLabellaboratory";
             this.linkLabellaboratory.Size = new System.Drawing.Size(82, 16);
             this.linkLabellaboratory.TabIndex = 26;
@@ -153,7 +153,7 @@
             this.lbldashboardscanner.AutoSize = true;
             this.lbldashboardscanner.BackColor = System.Drawing.Color.Transparent;
             this.lbldashboardscanner.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbldashboardscanner.Location = new System.Drawing.Point(822, 470);
+            this.lbldashboardscanner.Location = new System.Drawing.Point(727, 482);
             this.lbldashboardscanner.Name = "lbldashboardscanner";
             this.lbldashboardscanner.Size = new System.Drawing.Size(72, 16);
             this.lbldashboardscanner.TabIndex = 29;
@@ -164,7 +164,7 @@
             this.lbldashboarddepartment.AutoSize = true;
             this.lbldashboarddepartment.BackColor = System.Drawing.Color.Transparent;
             this.lbldashboarddepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbldashboarddepartment.Location = new System.Drawing.Point(306, 463);
+            this.lbldashboarddepartment.Location = new System.Drawing.Point(211, 475);
             this.lbldashboarddepartment.Name = "lbldashboarddepartment";
             this.lbldashboarddepartment.Size = new System.Drawing.Size(95, 16);
             this.lbldashboarddepartment.TabIndex = 30;
@@ -175,7 +175,7 @@
             this.panelmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelmenu.Location = new System.Drawing.Point(0, 0);
             this.panelmenu.Name = "panelmenu";
-            this.panelmenu.Size = new System.Drawing.Size(1050, 126);
+            this.panelmenu.Size = new System.Drawing.Size(1050, 231);
             this.panelmenu.TabIndex = 31;
             // 
             // Dashboard
