@@ -17,7 +17,8 @@ namespace I_See_You
         public Dashboard()
         {
             InitializeComponent();
-            
+            this.DoubleBuffered = true;
+
         }
 
 
