@@ -5,8 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,37 +12,65 @@ namespace I_See_You
 {
     public partial class Dashboard : Form
     {
+        private static Dictionary<string, Image> imageCache = new Dictionary<string, Image>();
+        private Bitmap backgroundBitmap;
+
         public Dashboard()
         {
             InitializeComponent();
             this.DoubleBuffered = true;
-
         }
 
-
-        
-        private void Dashboard_Load(object sender, EventArgs e)
+        protected override void OnPaintBackground(PaintEventArgs e)
         {
-            SetBackgroundGradient();
+            if (backgroundBitmap == null || backgroundBitmap.Size != ClientSize)
+            {
+                backgroundBitmap = new Bitmap(ClientSize.Width, ClientSize.Height);
+                using (Graphics g = Graphics.FromImage(backgroundBitmap))
+                using (LinearGradientBrush brush = new LinearGradientBrush(
+                    ClientRectangle, ColorTranslator.FromHtml("#C0E6F8"), ColorTranslator.FromHtml("#F3D2DD"), 50))
+                {
+                    g.FillRectangle(brush, ClientRectangle);
+                }
+            }
 
+            e.Graphics.DrawImage(backgroundBitmap, 0, 0);
+        }
+
+        private async void Dashboard_Load(object sender, EventArgs e)
+        {
+            LoadBackgroundImage();
+            await LoadLogoImage();
+
+            this.ActiveControl = image_logo; // Focus on the image first
+        }
+
+        private void LoadBackgroundImage()
+        {
+            SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);
+            UpdateStyles();
+        }
+
+        private async Task LoadLogoImage()
+        {
             var panel_menu = Path.GetDirectoryName(Application.ExecutablePath) + "\\Logo\\business_people.png";
-            panelmenu.BackgroundImage = Image.FromFile(panel_menu);
+            panelmenu.BackgroundImage = await LoadImageFromCacheAsync(panel_menu);
             panelmenu.BackgroundImageLayout = ImageLayout.Stretch;
 
             var uclm_logo = Path.GetDirectoryName(Application.ExecutablePath) + "\\Logo\\I_See_You.png";
-            image_logo.Image = Image.FromFile(uclm_logo);
-
-            this.ActiveControl = image_logo;    //to focus on image first
+            image_logo.Image = await LoadImageFromCacheAsync(uclm_logo);
         }
 
-        private void SetBackgroundGradient()
+        private static async Task<Image> LoadImageFromCacheAsync(string imagePath)
         {
-            LinearGradientBrush gradientBrush = new LinearGradientBrush(this.ClientRectangle, ColorTranslator.FromHtml("#C0E6F8"), ColorTranslator.FromHtml("#F3D2DD"), 50);
-            BackgroundImage = new Bitmap(ClientSize.Width, ClientSize.Height);
-            using (Graphics graphics = Graphics.FromImage(BackgroundImage))
+            if (imageCache.ContainsKey(imagePath))
             {
-                graphics.FillRectangle(gradientBrush, ClientRectangle);
+                return imageCache[imagePath];
             }
+
+            Image image = await Task.Run(() => Image.FromFile(imagePath));
+            imageCache.Add(imagePath, image);
+            return image;
         }
 
         private void linkLabeledp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -73,11 +99,6 @@ namespace I_See_You
             Accounting.Login login = new Accounting.Login();
             this.Visible = false;
             login.Show();
-        }
-
-        private void panelmenu_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

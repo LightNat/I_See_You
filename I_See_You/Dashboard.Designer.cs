@@ -177,7 +177,6 @@
             this.panelmenu.Name = "panelmenu";
             this.panelmenu.Size = new System.Drawing.Size(1050, 126);
             this.panelmenu.TabIndex = 31;
-            this.panelmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelmenu_Paint);
             // 
             // Dashboard
             // 
