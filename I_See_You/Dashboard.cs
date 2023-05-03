@@ -20,8 +20,8 @@ namespace I_See_You
             
         }
 
-        
 
+        
         private void Dashboard_Load(object sender, EventArgs e)
         {
             SetBackgroundGradient();
@@ -72,6 +72,11 @@ namespace I_See_You
             Accounting.Login login = new Accounting.Login();
             this.Visible = false;
             login.Show();
+        }
+
+        private void panelmenu_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
